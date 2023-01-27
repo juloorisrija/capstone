@@ -15,9 +15,9 @@
     
     /* Set gray background color and 100% height */
     .sidenav {
-      background-color: #f1f1f1;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg);
       height: 100%;
-    }
+          }
         
     /* On small screens, set height to 'auto' for the grid */
     @media screen and (max-width: 767px) {
@@ -47,24 +47,43 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
-      <h2>Logo</h2>
+      <br><br>
       <ul class="nav nav-pills nav-stacked">
-         <li class="active"><a href="home">Home</a></li>
-        <li class="active"><a href="login">Login</a></li>
+        <li class="active"><a href="login">Login</a></li><br>
         <li class="active"><a href="dashboard">Dasboard</a></li>
-        <li><a href="employee/action">Employee Details</a></li>
-        <li><a href="employee/add"> Add Employee Details</a></li>
-        <li><a href="employee/all">Delete and update Employee</a></li>
-        <li><a href="employee/count">Total Employees</a></li>
+        <li><a href="employee/action"style="color:white;">Employee Details</a></li>
+        <li><a href="employee/add"style="color:white;"> Add Employee Details</a></li>
+        <li><a href="employee/all"style="color:white;">Delete and update Employee</a></li>
+        <li><a href="employee/count"style="color:white;">Total Employees</a></li>
       </ul><br>
     </div>
-    <br> 
+    <br>  
     <div class="col-sm-9">
-      <div class="well">
-        <h4>Total Employees</h4>
-        
-        <h3 style="color: red">${msg1}</h3>
+      <div class="well"style="background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg);">
+       
       </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well" style="background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg);">
+            <h4 style="color:white;font-weight:bolder;">Employee Details</h4>
+            <a href="employee/action"><button type="button" class="btn btn-primary" style="margin-left: 130px;">-></button></a>
+          </div>
+        </div>
+         <div class="row">
+        <div class="col-sm-3">
+          <div class="well"style="background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg);">
+            <h4 style="color:white;font-weight:bolder;">Add New Employee</h4>
+            <a href="employee/add"><button type="button" class="btn btn-primary" style="margin-left: 150px;">-></button></a>
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-3">
+          <div class="well"style="background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg);">
+            <h4 style="color:white;font-weight:bolder;">Total Employees</h4>
+            <a href="employee/all"><button type="button" class="btn btn-primary" style="margin-left: 150px;">-></button></a>
+          </div>
+        </div>
+       
       </div>
       </div>
   

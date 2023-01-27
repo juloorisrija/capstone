@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Employee Dashboard</title>
+  <title>Compliance Dashboard</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -15,7 +15,7 @@
     
     /* Set gray background color and 100% height */
     .sidenav {
-      background-color: #f1f1f1;
+      background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg);
       height: 100%;
     }
         
@@ -34,7 +34,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+    
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -46,21 +46,44 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
-      <h2>Logo</h2>
+      
       <ul class="nav nav-pills nav-stacked">
-         <li class="active"><a href="home">Home</a></li>
-        <li class="active"><a href="login">Login</a></li>
+         <br><br>
+        <li class="active"><a href="login">Login</a></li><br>
+        
         <li class="active"><a href="http://localhost:8080/capstoneproject/dashboard">Dasboard</a></li>
-        <li><a href="compliance/all">Compliance</a></li>
-        <li><a href="compliance/add">Add Compliance</a></li>
-        <li><a href="status/all">Status Report</a></li>
+        <li><a href="compliance/all" style="color:white;">Compliance</a></li>
+        <li><a href="compliance/add" style="color:white;">Add Compliance</a></li>
+        <li><a href="status/all"style="color:white;">Status Report</a></li>
       </ul><br>
     </div>
     <br> 
     <div class="col-sm-9">
-      <div class="well">
+      <div class="well"style="background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg);">
        
       </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well" style="background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg);">
+            <h4 style="color:white;font-weight:bolder;">Compliance</h4>
+            <a href="compliance/all"><button type="button" class="btn btn-primary" style="margin-left: 130px;">-></button></a>
+          </div>
+        </div>
+         <div class="row">
+        <div class="col-sm-3">
+          <div class="well"style="background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg);">
+            <h4 style="color:white;font-weight:bolder;">Add Compliance</h4>
+            <a href="compliance/add"><button type="button" class="btn btn-primary" style="margin-left: 150px;">-></button></a>
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-3">
+          <div class="well"style="background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865393.jpg?size=626&ext=jpg);">
+            <h4 style="color:white;font-weight:bolder;">Status Report</h4>
+            <a href="status/all"><button type="button" class="btn btn-primary" style="margin-left: 150px;">-></button></a>
+          </div>
+        </div>
+        
     </div>
   </div>
 </body>

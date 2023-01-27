@@ -5,10 +5,10 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.project.employee.model.Department;
 import com.project.employee.model.Employee;
 import com.project.employee.model.EmployeeMapper;
 import com.project.employee.model.User;
@@ -47,8 +47,15 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	@Override
 	public boolean  createEmployee(Employee employee) {
 		// TODO Auto-generated method stub
+		try {
+			
+		
 		return jdbcTemplate.update(SQL_CREATE_EMPLOYEE, employee.getFirstName(),employee.getLastName()
 				, employee.getDob(),employee.getEmail(), employee.getDepartId()) > 0;
+		}catch(DataAccessException e) {
+			return false;
+		}
+				
 	}
 
 	@Override

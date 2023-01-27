@@ -4,11 +4,11 @@ public class Compliance {
 	
    private int complianceId=0;
    private String details;
-   private String date;
-   private String departid;
+   private String date1;
+   private String departId;
    private int emplcount;
-   private String status;
-   private int userid;
+   private String status1;
+   private int userId;
    
    
 public Compliance() {
@@ -16,16 +16,16 @@ public Compliance() {
 }
 
 
-public Compliance(int complianceId, String details, String date, String departid, int emplcount, String status,
-		int userid) {
+public Compliance(int complianceId, String details, String date1, String departId, int emplcount, String status1,
+		int userId) {
 	super();
 	this.complianceId = complianceId;
 	this.details = details;
-	this.date = date;
-	this.departid = departid;
+	this.date1 = date1;
+	this.departId = departId;
 	this.emplcount = emplcount;
-	this.status = status;
-	this.userid = userid;
+	this.status1 = status1;
+	this.userId = userId;
 }
 
 
@@ -49,23 +49,23 @@ public void setDetails(String details) {
 }
 
 
-public String getDate() {
-	return date;
+public String getDate1() {
+	return date1;
 }
 
 
-public void setDate(String date) {
-	this.date = date;
+public void setDate1(String date1) {
+	this.date1 = date1;
 }
 
 
-public String getDepartid() {
-	return departid;
+public String getDepartId() {
+	return departId;
 }
 
 
-public void setDepartid(String departid) {
-	this.departid = departid;
+public void setDepartId(String departId) {
+	this.departId = departId;
 }
 
 
@@ -79,23 +79,23 @@ public void setEmplcount(int emplcount) {
 }
 
 
-public String getStatus() {
-	return status;
+public String getStatus1() {
+	return status1;
 }
 
 
-public void setStatus(String status) {
-	this.status = status;
+public void setStatus1(String status1) {
+	this.status1 = status1;
 }
 
 
-public int getUserid() {
-	return userid;
+public int getUserId() {
+	return userId;
 }
 
 
-public void setUserid(int userid) {
-	this.userid = userid;
+public void setUserId(int userId) {
+	this.userId = userId;
 }
 
 }

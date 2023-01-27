@@ -22,15 +22,21 @@ import com.project.employee.service.StatusReportService;
 @RequestMapping("/compliance")
 public class ComplianceController {
 
+	static int comId,useid;
+	
 	@Autowired
     ComplianceService service;
+	StatusReportService service1;
 	
 	@RequestMapping(value="/all", method = RequestMethod.GET)
 	public String getAllCompliances(ModelMap map) {
 		
 		//System.out.println("all");
 		List<Compliance> comList = service.getAllCompliance();
-		
+		for(Compliance Com:comList) {
+			comId=Com.getComplianceId();
+			useid=Com.getUserId();
+		}
 		map.addAttribute("complianceList", comList);
 		
 		return "viewTotalCompliance";
@@ -46,7 +52,7 @@ public class ComplianceController {
 			return "addCompliance";
 		}
 		else {
-			map.addAttribute("msg", "Error in Adding new compliance!!");
+			map.addAttribute("msg", "Error in Adding new compliance,Because deparid and userid is forgine key!!");
 			return "addCompliance";
 		}
 		
@@ -60,37 +66,65 @@ public class ComplianceController {
 	
 	}
 	
-	@RequestMapping(value="/update/{complianceId}/{details}/{date1}/{departId}/{emplcount}/{status1}/{userId}", method = RequestMethod.GET)
-	public String update(ModelMap map, @PathVariable("complianceId") Integer complianceId, @PathVariable("details") String details,@PathVariable("date1") String date1, @PathVariable("departId") String departId, 
-		@PathVariable("emplcount") String emplcount,@PathVariable("status1") String status1,@PathVariable("userId") Integer  userId) {
-			
-			map.addAttribute("complianceId", complianceId);
-			map.addAttribute("details", details);
-			map.addAttribute("date1", date1);
-			map.addAttribute("departId", departId);
-			map.addAttribute("emplcount", emplcount);
-			map.addAttribute("status1", status1);
-			map.addAttribute("userId", userId);
-			//System.out.println("iam in pdate3 ");
-			return "updateCompliance";
-		
-			
-		}
-		@RequestMapping(value="/update",method=RequestMethod.POST)
-		String updateCompliance(ModelMap map,@ModelAttribute("compliance") Compliance compliance) {
-			//System.out.println("iam in pdate2 ");
-			if(service.updateCompliance(compliance)) {
-				//System.out.println("iam in pdate1 ");
-				map.addAttribute("updateMsg", "Compliance Updated Successfully!!");
-				
-				return "updateCompliance";
+//	@RequestMapping(value="/update/{complianceId}/{details}/{date1}/{departId}/{emplcount}/{status1}/{userId}", method = RequestMethod.GET)
+//	public String update(ModelMap map, @PathVariable("complianceId") Integer complianceId, @PathVariable("details") String details,@PathVariable("date1") String date1, @PathVariable("departId") String departId, 
+//		@PathVariable("emplcount") String emplcount,@PathVariable("status1") String status1,@PathVariable("userId") Integer  userId) {
+//			
+//			map.addAttribute("complianceId", complianceId);
+//			map.addAttribute("details", details);
+//			map.addAttribute("date1", date1);
+//			map.addAttribute("departId", departId);
+//			map.addAttribute("emplcount", emplcount);
+//			map.addAttribute("status1", status1);
+//			map.addAttribute("userId", userId);
+//			//System.out.println("iam in pdate3 ");
+//			return "updateCompliance";
+//		
+//			
+//		}
+//		@RequestMapping(value="/update",method=RequestMethod.POST)
+//		String updateCompliance(ModelMap map,@ModelAttribute("compliance") Compliance compliance) {
+//			//System.out.println("iam in pdate2 ");
+//			if(service.updateCompliance(compliance)) {
+//				//System.out.println("iam in pdate1 ");
+//				map.addAttribute("updateMsg", "Compliance Updated Successfully!!");
+//				
+//				return "updateCompliance";
+//			}
+//			else {
+//				map.addAttribute("updateMsg", "Complinace Not Updated!!");
+//				return "addCompliance";
+//			
+//		}
+//
+//		}
+		@RequestMapping(value="/addStatus", method = RequestMethod.POST)
+		public String addStatus(ModelMap map, @ModelAttribute("status") StatusReport status, @PathVariable("userId") Integer userid) {
+			System.out.println("hello");
+			map.addAttribute("id", userid);
+			boolean flag = service1.addStatus(status);
+			//map.addAttribute("comId", comId);
+			//map.addAttribute("useid", useid);
+			if(flag) {
+				map.addAttribute("msg", "status created Successfully!!");
+				return "addStatus";
 			}
 			else {
-				map.addAttribute("updateMsg", "Complinace Not Updated!!");
-				return "addCompliance";
+				map.addAttribute("msg", "Error in creating new status!!");
+				return "addStatus";
+			}
+			
 			
 		}
 
+		@RequestMapping(value="/addStatus", method = RequestMethod.GET)
+		public String addStatusPage(ModelMap map) {
+			System.out.println("hello1");
+			System.out.println(comId+"hell");
+//			map.addAttribute("comId", comId);
+//			map.addAttribute("useid", useid);
+				return "addStatus";
+		
 		}
 		
 }

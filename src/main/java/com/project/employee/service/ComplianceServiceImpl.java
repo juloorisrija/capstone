@@ -31,11 +31,11 @@ public class ComplianceServiceImpl implements ComplianceService {
 	}
 
 
-	@Override
-	public boolean updateCompliance(Compliance compliance) {
-		// TODO Auto-generated method stub
-		return complianceDao.updateCompliance(compliance);
-	}
+//	@Override
+//	public boolean updateCompliance(Compliance compliance) {
+//		// TODO Auto-generated method stub
+//		return complianceDao.updateCompliance(compliance);
+//	}
 	
 
 }

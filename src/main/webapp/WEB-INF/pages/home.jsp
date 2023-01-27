@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Welcome</title>
+    
+    
 </head>
 <body >
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-info">
@@ -39,8 +41,22 @@
       background-position: center;
       background-size: cover;
       position: relative;">
-
+	<div class="container ">
+     <div class="row-3">
+     	<div class="col-md-5 text-white" >
+     	<h2 text-align="center">Employee Management System</h2>
+      
+      <p>We believe every employee is a leader delivering ideas that makes a difference to this world we live in.
+       Infinitus take pride in their work which comes naturally at Infinite. So join the team of Infinitus and give
+        your career an Infinite edge, with an inspiring environment and a global work culture. Infinite focuses on nurturing a diverse,
+         integrated workforce aligned to a common purpose of consistently delivering excellence.</p>
+     	</div>
+     </div>
+     </div>
+    
       </div>
       <a href="login">login</a>
+      
 </body>
 </html>
+

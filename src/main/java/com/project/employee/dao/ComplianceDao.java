@@ -11,5 +11,5 @@ public interface ComplianceDao {
 	  
 	  boolean createCompliance(Compliance compliance);
 	  
-	  boolean updateCompliance(Compliance compliance);
+	 // boolean updateCompliance(Compliance compliance);
 }

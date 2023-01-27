@@ -56,7 +56,7 @@ public class EmployeeController {
 			return "addEmployee";
 		}
 		else {
-			map.addAttribute("msg", "Error in Adding new Employee!!");
+			map.addAttribute("msg", "Error in Adding new Employee,Because departmentId is foregin key!!");
 			return "addEmployee";
 		}
 		

@@ -11,5 +11,5 @@ public interface ComplianceService {
 	
 	public boolean addCompliance(Compliance compliance);
 	
-	public boolean updateCompliance(Compliance compliance);
+	//public boolean updateCompliance(Compliance compliance);
 }

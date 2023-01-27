@@ -19,7 +19,7 @@ public class AdminController {
 
 	@Autowired
 	EmployeeService service;
-	StatusReportService service1;
+	
 
 	@RequestMapping(value="/dashboard",method=RequestMethod.POST)
 	public String printGreet(ModelMap map,@ModelAttribute("user")User user) {
@@ -62,30 +62,7 @@ public class AdminController {
 	public String homepage() {
 		return "home";
 	}
-//	@RequestMapping(value="/addStatus", method = RequestMethod.POST)
-//	public String addStatus(ModelMap map, @ModelAttribute("status") StatusReport status, @PathVariable("userId") Integer userid) {
-//		System.out.println("hello");
-//		map.addAttribute("id", userid);
-//		boolean flag = service1.addStatus(status);
-//		
-//		if(flag) {
-//			map.addAttribute("msg", "status created Successfully!!");
-//			return "addStatus";
-//		}
-//		else {
-//			map.addAttribute("msg", "Error in creating new status!!");
-//			return "addStatus";
-//		}
-//		
-//		
-//	}
-//
-//	@RequestMapping(value="/addStatus", method = RequestMethod.GET)
-//	public String addStatusPage() {
-//		System.out.println("hello1");
-//			return "addStatus";
-//	
-	//}
+	
 	
 //	@RequestMapping(value="/employeeDetails",method=RequestMethod.GET)
 //	public String home1() {
